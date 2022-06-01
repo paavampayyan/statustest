@@ -16,7 +16,7 @@ bot = Client(
 print("bot starting")
 
 
-@bot.on_message(filters.command(['start']))
+@bot.on_message(filters.command(['start']) & filters.private)
 def start(client, message):
     message.reply_text('Hello, i am redirector bot made by @nousername_psycho')
     message.reply_text('Send me a video. i will upload it to our channnel')
